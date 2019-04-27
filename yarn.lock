@@ -9559,6 +9559,18 @@ stylehacks@^4.0.0:
     postcss "^7.0.0"
     postcss-selector-parser "^3.0.0"
 
+styletron-client@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/styletron-client/-/styletron-client-3.0.4.tgz#50c3fcdc7f45ed0693d68dc174bd0f2fa607cc57"
+  integrity sha512-AzplgO6MBE40/+H1BWq5R6tyd9DipoImU5hn8OFKEDTsku3NikT+JuhfEo20ZaalMu8E7xE5VgyUhLJlJJGRTA==
+  dependencies:
+    styletron-core "^3.0.4"
+
+styletron-core@^3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/styletron-core/-/styletron-core-3.0.4.tgz#648081572a8de30acbe3008cd283c421565444bb"
+  integrity sha512-c/lLv7TRp0Pb01BegRbPyS0zmAwnxU78/qU2ofpIPxDf0zTfrRWdqlSDCU9Qt9QgkSmmVkZ9nAwrFjLJxgir+w==
+
 styletron-react@^4.4.6:
   version "4.4.6"
   resolved "https://registry.yarnpkg.com/styletron-react/-/styletron-react-4.4.6.tgz#61e07ad9d40468be2b9d74e72499fe36654eb236"

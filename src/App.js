@@ -1,14 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Styletron from 'styletron-client';
+import {styled, Provider as StyletronProvider} from 'styletron-react';
+
+
 import './App.css';
 import ConverterApp from './converter-app';
 
 // TODO: Add routing
 function App() {
   return (
-    <div className="App">
-      <ConverterApp />
-    </div>
+    <StyletronProvider styletron={Styletron}>
+      <div className="App">
+        <ConverterApp />
+      </div>
+    </StyletronProvider>
   );
 }
 
