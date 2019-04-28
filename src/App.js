@@ -1,28 +1,24 @@
 import React from 'react';
 import styled, {ThemeProvider} from 'styled-components';
-import theme from 'styled-theming';
-
 
 import './App.css';
 import ConverterApp from './converter-app';
 
-const boxBackgroundColor = theme('mode', {
-  light: '#fff',
-  dark: '#000',
-});
 
-const Box = styled.div`
-  color: white;
-  background-color: ${boxBackgroundColor};
-`;
+export const DEFAULT_THEME = {
+  primaryColor: '#E4405F',
+  lightColor: '#FFFFFF',
+  // secondaryColor
+  // errorColor
+  // successColor
+  darkColor: '#171717',
+}
 
 // TODO: Add routing
 function App() {
   return (
-  <ThemeProvider theme={{ mode: 'dark' }}>
+  <ThemeProvider theme={DEFAULT_THEME}>
     <div className="App">
-      <Box>
-      Something Box</Box>
       <ConverterApp />
     </div>
   </ThemeProvider>
