@@ -1,20 +1,31 @@
 import React from 'react';
-
-import Styletron from 'styletron-client';
-import {styled, Provider as StyletronProvider} from 'styletron-react';
+import styled, {ThemeProvider} from 'styled-components';
+import theme from 'styled-theming';
 
 
 import './App.css';
 import ConverterApp from './converter-app';
 
+const boxBackgroundColor = theme('mode', {
+  light: '#fff',
+  dark: '#000',
+});
+
+const Box = styled.div`
+  color: white;
+  background-color: ${boxBackgroundColor};
+`;
+
 // TODO: Add routing
 function App() {
   return (
-    <StyletronProvider styletron={Styletron}>
-      <div className="App">
-        <ConverterApp />
-      </div>
-    </StyletronProvider>
+  <ThemeProvider theme={{ mode: 'dark' }}>
+    <div className="App">
+      <Box>
+      Something Box</Box>
+      <ConverterApp />
+    </div>
+  </ThemeProvider>
   );
 }
 
