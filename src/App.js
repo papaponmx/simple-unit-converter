@@ -12,13 +12,15 @@ export const DEFAULT_THEME = {
   // errorColor
   // successColor
   darkColor: '#171717',
+  // Default font
+  // Font size
+  // Spacing
 };
 
 // TODO: Add routing
 function App() {
   return (
     <ThemeProvider theme={DEFAULT_THEME}>
-      <div className="App" />
       <ConverterApp />
     </ThemeProvider>
   );

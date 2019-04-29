@@ -1,7 +1,5 @@
-import React from 'react'
-import styled from 'styled-components'
-import { DEFAULT_THEME as theme } from '../App'
-/** This is the app header */
+import React from 'react';
+import styled from 'styled-components';
 
 const Header = styled.header`
   background-color: ${props => props.theme.primaryColor};
@@ -11,18 +9,10 @@ const Header = styled.header`
 `;
 
 
-
 export default function () {
   return (
     <Header>
-    {
-      // <span>TODO: Add hamburguer menu</span>
-
-    }
       <h1>Simple Unit Converter</h1>
-     {
-      //  <span>TODO: Add Icon</span>
-     }
     </Header>
-  )
+  );
 }

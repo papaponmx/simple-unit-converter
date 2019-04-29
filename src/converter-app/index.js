@@ -6,19 +6,54 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Header from '../header';
+import Header from '../app-header';
+
+
+/**
+ * STYLED
+ */
+
+const Container = styled.div`
+  height: 40vh;
+  width: 100vw;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`;
+
+const DarkBox = styled.div`
+  background-color: ${props => props.theme.darkColor};
+  color: ${props => props.theme.lightColor};
+`;
+
+const PrimaryBox = styled.div`
+  background-color: ${props => props.theme.primaryColor};
+  color: ${props => props.theme.lightColor};
+`;
+
+
+/**
+ * REGULAR COMPONENTS
+ */
 
 
 const InputBox = () => (
-  <div>
-   Input
-  </div>
+  <DarkBox>
+    <Container>
+
+      Input
+    </Container>
+  </DarkBox>
 );
 
 const OutputBox = () => (
-  <div>
-    Output
-  </div>
+  <PrimaryBox>
+    <Container>
+      Output
+    </Container>
+  </PrimaryBox>
 
 );
 
@@ -29,7 +64,6 @@ export default function ConverterApp() {
       <Header />
       <InputBox />
       <OutputBox />
-      <h3>Hello there</h3>
     </div>
   );
 }
