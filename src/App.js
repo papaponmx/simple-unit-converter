@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, {ThemeProvider} from 'styled-components';
+import { ThemeProvider } from 'styled-components';
 
 import './App.css';
 import ConverterApp from './converter-app';
@@ -12,16 +12,15 @@ export const DEFAULT_THEME = {
   // errorColor
   // successColor
   darkColor: '#171717',
-}
+};
 
 // TODO: Add routing
 function App() {
   return (
-  <ThemeProvider theme={DEFAULT_THEME}>
-    <div className="App">
+    <ThemeProvider theme={DEFAULT_THEME}>
+      <div className="App" />
       <ConverterApp />
-    </div>
-  </ThemeProvider>
+    </ThemeProvider>
   );
 }
 
