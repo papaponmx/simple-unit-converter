@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Context as MagnitudesContext } from '../../context';
+import Select from '../../Forms/select';
 
 const UnitsSelect = () => {
   const { selectedMagnitude } = useContext(MagnitudesContext);
@@ -7,13 +8,13 @@ const UnitsSelect = () => {
 
   return (
     <label aria-label="Choose a unit" htmlFor="unit-select"> {/* eslint-disable-line */}
-      <select name="inputUnit" id="unit-select">
+      <Select name="inputUnit" id="unit-select">
         {
           units.map(({ name }) => (
             <option key={name} value={name}>{name}</option>
           ))
         }
-      </select>
+      </Select>
     </label>
   );
 };
