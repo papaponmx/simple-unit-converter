@@ -1,33 +1,8 @@
 import React, { createContext, useState } from 'react';
 
+import initialState from './initialState';
+
 export const Context = createContext();
-
-
-const initialState = {
-  magnitudes: [
-    {
-      name: 'weight',
-      units: [
-        {
-          name: 'kg',
-        },
-        {
-          name: 'lbs',
-        },
-      ],
-    },
-    {
-      name: 'distance',
-    },
-    {
-      name: 'height',
-    },
-    {
-      name: 'volume',
-    },
-  ],
-};
-
 
 // TODO: Define the actions to implement and how the state should be mutated
 // https://codesandbox.io/s/5xw1jl721l?from-embed
