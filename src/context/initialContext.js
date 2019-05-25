@@ -1,4 +1,4 @@
-const initialState = {
+const initialContext = {
   magnitudes: [
     {
       name: 'weight',
@@ -23,4 +23,4 @@ const initialState = {
   ],
 };
 
-export default initialState;
+export default initialContext;
