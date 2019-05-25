@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components';
 
 import './App.css';
 import ConverterApp from './converter-app';
-
+import { Provider as AppContextProvider } from './context';
 
 export const DEFAULT_THEME = {
   primaryColor: '#E4405F',
@@ -20,9 +20,11 @@ export const DEFAULT_THEME = {
 // TODO: Add routing
 function App() {
   return (
-    <ThemeProvider theme={DEFAULT_THEME}>
-      <ConverterApp />
-    </ThemeProvider>
+    <AppContextProvider>
+      <ThemeProvider theme={DEFAULT_THEME}>
+        <ConverterApp />
+      </ThemeProvider>
+    </AppContextProvider>
   );
 }
 

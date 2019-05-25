@@ -1,33 +1,68 @@
 import React, { createContext, useState } from 'react';
 
-export const Context = createContext()
+export const Context = createContext();
 
 
+const initialState = {
+  magnitudes: [
+    {
+      name: 'weight',
+      units: [
+        {
+          name: 'kg',
+        },
+        {
+          name: 'lbs',
+        },
+      ],
+    },
+    {
+      name: 'distance',
+    },
+    {
+      name: 'height',
+    },
+    {
+      name: 'volume',
+    },
+  ],
+};
 
 
-export const Provider = ({
-  children,
-  // TODO: Define  initialState as props to provider
-  magnitudes: InitialMagnitudes,
-  selectedMagnitude: InitialSelectedMagnitude,
-  unitToConvert: InitialUnitToConvert,
-}) => {
+// TODO: Define the actions to implement and how the state should be mutated
+// https://codesandbox.io/s/5xw1jl721l?from-embed
+/**
+ *
+ const convertUnit = () => {
+   selectedMag;
 
+   return setUnitOutput(convertedUnit);
+  };
+ */
+
+
+export const Provider = ({ children }) => { // eslint-disable-line
   // Use state to keep the values
-  const [ magnitudes, setMagnitude ] = useState(InitialMagnitudes);
-  const [ selectedMagnitude, setSelectedMagnitude ] = useState(InitialSelectedMagnitude);
-  const [ unitInput, setUnitInput ] = useState(InitialUnitInput)
-
-  // TODO: Define the actions to implement and how the state should be mutated
-  // https://codesandbox.io/s/5xw1jl721l?from-embed
-  const convertUnit = (userInput) => {
-    selectedMag
-
-    return setUnitOutput(convertedUnit)
-  }
 
 
-  return <Context.Provider value={magnitudesContext}
+  const [magnitudes, setMagnitude] = useState(initialState.magnitudes);
+  const [selectedMagnitude, setSelectedMagnitude] = useState(initialState.magnitudes[0]);
+
+  // TODO: Define default input values
+  // const [unitInput, setUnitInput] = useState(1);
+
+  const magnitudesContext = {
+    magnitudes,
+    setMagnitude,
+    selectedMagnitude,
+    setSelectedMagnitude,
+  };
+
+  return (
+    <Context.Provider value={magnitudesContext}>
+      {children}
+    </Context.Provider>
+  );
 };
 
 
