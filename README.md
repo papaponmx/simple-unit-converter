@@ -1,20 +1,22 @@
-# Simple Unit Converter
+# simple-unit
 
-Why this project
+## CLI Commands
 
+``` bash
+# install dependencies
+npm install
 
-## Features
+# serve with hot reload at localhost:8080
+npm run dev
 
-* ️Bidirectional `KG` to `LBS` Unit Conversion.
-* Bidirectional `FT` to `mt` Unit Conversion.
-* Bidirectional `F` to `mt` Unit Conversion.
-* Dark Theme
-* AllyTheme
+# build for production with minification
+npm run build
 
-## Missing Features
+# test the production build locally
+npm run serve
 
-* No User tracking
-* No Publicity
-* No 💩
+# run tests with jest and preact-render-spy 
+npm run test
+```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+For detailed explanation on how things work, checkout the [CLI Readme](https://github.com/developit/preact-cli/blob/master/README.md).
