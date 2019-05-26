@@ -5,13 +5,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import TargetInput from './TargetInput';
 import UnitsSelect from '../UnitsSelect';
 import { Container } from '../SourceBox';
-
-/**
- * STYLED
- */
-
 
 const PrimaryBox = styled.div`
  background-color: ${props => props.theme.primaryColor};
@@ -21,7 +17,7 @@ const PrimaryBox = styled.div`
 const TargetBox = () => (
   <PrimaryBox>
     <Container>
-     Output
+      <TargetInput />
       <UnitsSelect isOutput />
     </Container>
   </PrimaryBox>
