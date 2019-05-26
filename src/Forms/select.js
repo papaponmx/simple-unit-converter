@@ -12,4 +12,9 @@ const Select = styled.select`
   /* ... */
 `;
 
+export const Option = styled.option`
+  color: ${props => props.theme.lightColor};
+  background-color: ${props => props.theme.darkColor};
+`;
+
 export default Select;

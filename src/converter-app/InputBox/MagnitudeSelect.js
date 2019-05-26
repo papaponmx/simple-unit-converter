@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Context as MagnitudesContext } from '../../context';
-import Select from '../../Forms/select';
+import Select, { Option } from '../../Forms/select';
 
 const MagnitudeSelect = () => {
   const { magnitudes } = useContext(MagnitudesContext);
@@ -11,7 +11,7 @@ const MagnitudeSelect = () => {
       <Select name="magnitude" id="magnitude-select">
         {
           magnitudes.map(({ name }) => (
-            <option key={name} value={name}>{name}</option>
+            <Option key={name} value={name}>{name}</Option>
           ))
         }
       </Select>
