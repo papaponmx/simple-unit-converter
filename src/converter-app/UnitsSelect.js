@@ -5,21 +5,21 @@ import Select, { Option } from '../Forms/select';
 
 const UnitsSelect = ({ isOutput = false }) => {
   const {
-    inputUnit,
+    sourceUnit,
     selectedMagnitude,
-    setInputUnit,
+    setSourceUnit,
   } = useContext(MagnitudesContext);
   const { units } = selectedMagnitude;
 
   const handleSelect = (event) => {
     // IDEA: Move this function into a getters file
-    const selectedInputUnit = units.find(unit => unit.name === event.target.value);
-    return setInputUnit(selectedInputUnit);
+    const selectedsourceUnit = units.find(unit => unit.name === event.target.value);
+    return setSourceUnit(selectedsourceUnit);
   };
 
   const renderOptions = () => {
     const options = isOutput
-      ? units.filter(unit => unit.name !== inputUnit.name)
+      ? units.filter(unit => unit.name !== sourceUnit.name)
       : units;
 
     return options.map(({ name }) => (
@@ -33,7 +33,7 @@ const UnitsSelect = ({ isOutput = false }) => {
     <Select
       aria-label="Choose a unit"
       id="unit-select"
-      name="inputUnit"
+      name="sourceUnit"
       onChange={handleSelect}
     >
       {renderOptions()}

@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { Context as MagnitudesContext } from '../../context';
 
 
-const Input = styled.input`
+export const Input = styled.input`
   color: ${props => props.theme.lightColor};
   border: none;
   background-color: rgba(155, 155, 155, 0.2);
@@ -14,8 +14,8 @@ const Input = styled.input`
 `;
 
 const SourceInput = () => {
-  const { inputValue = 1, setInputValue } = useContext(MagnitudesContext);
-  const handleChange = event => setInputValue(event.target.value);
+  const { sourceInputValue = 1, setSourceInputValue } = useContext(MagnitudesContext);
+  const handleChange = event => setSourceInputValue(event.target.value);
 
   return (
     <Input
@@ -24,8 +24,9 @@ const SourceInput = () => {
       inputMode="decimal"
       name="sourceInput"
       onChange={handleChange}
-      type="number"
-      value={inputValue}
+      pattern="[0-9]+(\.[0-9]{0,2})?%?"
+      type="text"
+      value={sourceInputValue}
     />
   );
 };
