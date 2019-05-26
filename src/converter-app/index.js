@@ -7,7 +7,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 import Header from '../app-header';
-import InputBox, { Container } from './InputBox';
+import InputBox, { Container } from './SourceBox';
 
 
 /**
