@@ -13,13 +13,28 @@ const initialContext = {
     },
     {
       name: 'distance',
+      units: [
+        {
+          name: 'mts',
+        },
+        {
+          name: 'fts',
+        },
+        {
+          name: 'km',
+        },
+        {
+          name: 'miles',
+        },
+      ],
     },
-    {
-      name: 'height',
-    },
-    {
-      name: 'volume',
-    },
+    // TODO: Add support for more units
+    // {
+    //   name: 'height',
+    // },
+    // {
+    //   name: 'volume',
+    // },
   ],
 };
 

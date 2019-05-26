@@ -3,19 +3,30 @@ import { Context as MagnitudesContext } from '../../context';
 import Select, { Option } from '../../Forms/select';
 
 const UnitsSelect = () => {
-  const { selectedMagnitude } = useContext(MagnitudesContext);
+  const { selectedMagnitude, setInputUnit } = useContext(MagnitudesContext);
   const { units } = selectedMagnitude;
 
+  const handleSelect = (event) => {
+    // IDEA: Move this function into a getters file
+    const selectedInputUnit = units.find(unit => unit.name === event.target.value);
+    return setInputUnit(selectedInputUnit);
+  };
+
   return (
-    <label aria-label="Choose a unit" htmlFor="unit-select"> {/* eslint-disable-line */}
-      <Select name="inputUnit" id="unit-select">
-        {
-          units.map(({ name }) => (
-            <Option key={name} value={name}>{name}</Option>
-          ))
-        }
-      </Select>
-    </label>
+    <Select
+      aria-label="Choose a unit"
+      id="unit-select"
+      name="inputUnit"
+      onChange={handleSelect}
+    >
+      {
+      units.map(({ name }) => (
+        <Option key={name} value={name}>
+          {name}
+        </Option>
+      ))
+      }
+    </Select>
   );
 };
 
