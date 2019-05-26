@@ -21,6 +21,7 @@ const SourceInput = () => {
     sourceUnit,
     targetUnit,
   } = useContext(MagnitudesContext);
+
   const handleChange = event => setSourceInputValue(event.target.value) || setTargetInputValue(
     transformUnit(
       event.target.value,
