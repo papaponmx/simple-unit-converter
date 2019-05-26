@@ -7,7 +7,7 @@ const initialContext = {
           name: 'kg',
         },
         {
-          name: 'lbs',
+          name: 'lb',
         },
       ],
     },
@@ -15,10 +15,10 @@ const initialContext = {
       name: 'distance',
       units: [
         {
-          name: 'mts',
+          name: 'mt',
         },
         {
-          name: 'fts',
+          name: 'ft',
         },
         {
           name: 'km',
