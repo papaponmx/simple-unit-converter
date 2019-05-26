@@ -21,7 +21,7 @@ export const Provider = ({ children }) => { // eslint-disable-line
   const [selectedMagnitude, setSelectedMagnitude] = useState(initialContext.magnitudes[0]);
   const [sourceUnit, setSourceUnit] = useState(initialContext.magnitudes[0].units[0]);
   const [sourceInputValue, setSourceInputValue] = useState();
-  const [targetUnit, setTargetUnit] = useState(initialContext.magnitudes[0].units[0]);
+  const [targetUnit, setTargetUnit] = useState(initialContext.magnitudes[0].units[1]);
   const [targetInputValue, setTargetInputValue] = useState();
 
   const magnitudesContext = {

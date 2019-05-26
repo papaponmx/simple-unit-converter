@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import { Context as MagnitudesContext } from '../../context';
-
+import { transformUnit } from '../../utils';
 
 export const Input = styled.input`
   color: ${props => props.theme.lightColor};
@@ -14,8 +14,20 @@ export const Input = styled.input`
 `;
 
 const SourceInput = () => {
-  const { sourceInputValue = 1, setSourceInputValue } = useContext(MagnitudesContext);
-  const handleChange = event => setSourceInputValue(event.target.value);
+  const {
+    setSourceInputValue,
+    setTargetInputValue,
+    sourceInputValue = 1,
+    sourceUnit,
+    targetUnit,
+  } = useContext(MagnitudesContext);
+  const handleChange = event => setSourceInputValue(event.target.value) || setTargetInputValue(
+    transformUnit(
+      event.target.value,
+      targetUnit.name,
+      sourceUnit.name,
+    ),
+  );
 
   return (
     <Input

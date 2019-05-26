@@ -1,14 +1,18 @@
 /* eslint-disable import/prefer-default-export */
 
 export const transformUnit = (
-  sourceUnit,
   sourceInputValue,
   targetUnit,
+  sourceUnit,
 ) => {
-  if (sourceUnit === 'kg' && targetUnit === 'lbs') {
+  console.log('values comming to transform are ', sourceInputValue,
+    targetUnit,
+    sourceUnit);
+  // TODO: Move units to constants
+  if (sourceUnit === 'kg' && targetUnit === 'lb') {
     return (Number(sourceInputValue) * 2.2046).toFixed(2);
   }
-  if (sourceUnit === 'lbs' && targetUnit === 'kg') {
+  if (sourceUnit === 'lb' && targetUnit === 'kg') {
     return (Number(sourceInputValue) * 0.454).toFixed(2);
   }
   return null;
