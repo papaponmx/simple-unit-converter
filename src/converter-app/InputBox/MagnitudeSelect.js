@@ -2,17 +2,25 @@ import React, { useContext } from 'react';
 import { Context as MagnitudesContext } from '../../context';
 import Select, { Option } from '../../Forms/select';
 
+const renderOptions = (magnitudes, setSelectedMagnitude) => magnitudes.map(magnitude => (
+  <Option
+    key={magnitude.name}
+    value={magnitude.name}
+    onClick={() => setSelectedMagnitude(magnitude)}
+  >
+    {magnitude.name}
+  </Option>
+));
+
+
 const MagnitudeSelect = () => {
-  const { magnitudes } = useContext(MagnitudesContext);
+  const { magnitudes, setSelectedMagnitude } = useContext(MagnitudesContext);
 
   return (
-  // TODO: Add event handlers so it updates MAGNITUDE
     <label aria-label="Magnitude" htmlFor="magnitude-select">{/* eslint-disable-line */}
-      <Select name="magnitude" id="magnitude-select">
+      <Select id="magnitude-select" name="magnitude">
         {
-          magnitudes.map(({ name }) => (
-            <Option key={name} value={name}>{name}</Option>
-          ))
+          renderOptions(magnitudes, setSelectedMagnitude)
         }
       </Select>
     </label>

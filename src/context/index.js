@@ -17,9 +17,6 @@ export const Context = createContext();
 
 
 export const Provider = ({ children }) => { // eslint-disable-line
-  // Use state to keep the values
-
-
   const [magnitudes, setMagnitude] = useState(initialContext.magnitudes);
   const [selectedMagnitude, setSelectedMagnitude] = useState(initialContext.magnitudes[0]);
 

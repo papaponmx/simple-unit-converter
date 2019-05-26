@@ -27,7 +27,7 @@ const DarkBox = styled.div`
 const InputBox = () => (
   <DarkBox>
     <Container>
-      <MagnitudeSelect options={options} />
+      <MagnitudeSelect />
       {
         /**
          * Input
