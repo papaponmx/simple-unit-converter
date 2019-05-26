@@ -6,7 +6,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 import MagnitudeSelect from './MagnitudeSelect';
+import SourceInput from './SourceInput';
 import UnitsSelect from './UnitsSelect';
+
 import { options } from '../index';
 
 export const Container = styled.div`
@@ -28,11 +30,7 @@ const InputBox = () => (
   <DarkBox>
     <Container>
       <MagnitudeSelect />
-      {
-        /**
-         * Input
-         */
-      }
+      <SourceInput />
       <UnitsSelect selectedMagnitude={options[0]} />
     </Container>
   </DarkBox>

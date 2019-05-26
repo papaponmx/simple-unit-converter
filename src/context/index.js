@@ -20,14 +20,17 @@ export const Provider = ({ children }) => { // eslint-disable-line
   const [magnitudes, setMagnitude] = useState(initialContext.magnitudes);
   const [selectedMagnitude, setSelectedMagnitude] = useState(initialContext.magnitudes[0]);
   const [inputUnit, setInputUnit] = useState(initialContext.magnitudes[0].units[0]);
+  const [inputValue, setInputValue] = useState();
 
   // TODO: Define default input values
 
   const magnitudesContext = {
     inputUnit,
+    inputValue,
     magnitudes,
     selectedMagnitude,
     setInputUnit,
+    setInputValue,
     setMagnitude,
     setSelectedMagnitude,
   };
