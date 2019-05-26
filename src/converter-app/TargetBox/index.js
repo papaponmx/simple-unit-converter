@@ -5,8 +5,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import UnitsSelect from '../SourceBox/UnitsSelect';
 import { Container } from '../SourceBox';
-
 
 /**
  * STYLED
@@ -22,6 +22,7 @@ const TargetBox = () => (
   <PrimaryBox>
     <Container>
      Output
+      <UnitsSelect isOutput />
     </Container>
   </PrimaryBox>
 
