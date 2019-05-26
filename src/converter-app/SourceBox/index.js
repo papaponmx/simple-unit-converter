@@ -9,8 +9,6 @@ import MagnitudeSelect from './MagnitudeSelect';
 import SourceInput from './SourceInput';
 import UnitsSelect from './UnitsSelect';
 
-import { options } from '../index';
-
 export const Container = styled.div`
   height: 40vh;
   width: 100vw;
@@ -31,7 +29,7 @@ const InputBox = () => (
     <Container>
       <MagnitudeSelect />
       <SourceInput />
-      <UnitsSelect selectedMagnitude={options[0]} />
+      <UnitsSelect />
     </Container>
   </DarkBox>
 );

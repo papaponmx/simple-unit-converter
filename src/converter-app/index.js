@@ -20,38 +20,6 @@ const PrimaryBox = styled.div`
   color: ${props => props.theme.lightColor};
 `;
 
-
-/**
- * CONVERSIONS DATA
- */
-
-export const options = [
-  {
-    name: 'weight',
-    units: [
-      'kg',
-      'lbs',
-    ],
-  },
-  {
-    name: 'distance',
-  },
-  {
-    name: 'height',
-  },
-  {
-    name: 'volume',
-  },
-];
-/**
- * FORMS
- */
-
-
-/**
- * REGULAR COMPONENTS
- */
-
 const OutputBox = () => (
   <PrimaryBox>
     <Container>
