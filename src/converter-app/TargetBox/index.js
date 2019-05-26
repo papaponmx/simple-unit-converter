@@ -5,7 +5,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import UnitsSelect from '../SourceBox/UnitsSelect';
+import UnitsSelect from '../UnitsSelect';
 import { Container } from '../SourceBox';
 
 /**

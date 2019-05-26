@@ -7,7 +7,7 @@ import styled from 'styled-components';
 
 import MagnitudeSelect from './MagnitudeSelect';
 import SourceInput from './SourceInput';
-import UnitsSelect from './UnitsSelect';
+import UnitsSelect from '../UnitsSelect';
 
 export const Container = styled.div`
   height: 40vh;

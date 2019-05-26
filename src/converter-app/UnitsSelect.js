@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Context as MagnitudesContext } from '../../context';
-import Select, { Option } from '../../Forms/select';
+import { Context as MagnitudesContext } from '../context';
+import Select, { Option } from '../Forms/select';
 
 const UnitsSelect = ({ isOutput = false }) => {
   const {
