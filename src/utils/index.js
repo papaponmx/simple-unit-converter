@@ -5,9 +5,6 @@ export const transformUnit = (
   targetUnit,
   sourceUnit,
 ) => {
-  console.log('values comming to transform are ', sourceInputValue,
-    targetUnit,
-    sourceUnit);
   // TODO: Move units to constants
   if (sourceUnit === 'kg' && targetUnit === 'lb') {
     return (Number(sourceInputValue) * 2.2046).toFixed(2);

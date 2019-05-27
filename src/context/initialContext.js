@@ -11,24 +11,24 @@ const initialContext = {
         },
       ],
     },
-    {
-      name: 'distance',
-      units: [
-        {
-          name: 'mt',
-        },
-        {
-          name: 'ft',
-        },
-        {
-          name: 'km',
-        },
-        {
-          name: 'miles',
-        },
-      ],
-    },
     // TODO: Add support for more units
+    // {
+    //   name: 'distance',
+    //   units: [
+    //     {
+    //       name: 'mt',
+    //     },
+    //     {
+    //       name: 'ft',
+    //     },
+    //     {
+    //       name: 'km',
+    //     },
+    //     {
+    //       name: 'miles',
+    //     },
+    //   ],
+    // },
     // {
     //   name: 'height',
     // },
