@@ -32,7 +32,7 @@ Use my knowledge and make with these features:
 * No User tracking 🔎
 * No Publicity :bar_chart:
 * No 💩
-* Open source
+* Open source 📖
 
 ## Next Features
 
