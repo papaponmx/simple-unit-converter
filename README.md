@@ -21,6 +21,7 @@ Therefor I need a way to constantly convert units from pounds to kilograms. Now,
 * There is an app, but I don't want to see commercials, neither use 25 MB for such a simple app space on my device, nor want to see commercials.
 * Just Google it, I could but that means turning on the mobile data. That seems trivial, but I start to get notifications from social apps. The problem is that they induce me train for more time than I should, and make me more prone to injuries due to bad form.
 * There is a website for that. Kind of, but they are not fully responsive not PWAs.
+* Create a PWA connected to the cloud in order to track your own trainings. I didn't think of that at the time 🤔
 
 ### The solution 🤓
 
@@ -42,6 +43,10 @@ Use my knowledge and make with these features:
 * User history. ⏲
 * A11y Theme 👵
 * Light Theme 👵
+
+## Contributions
+
+Help is always appreciated, but not required. Just check [CONTRIBUTING.md](CONTRIBUTING.md) before.
 
 ## License
 
