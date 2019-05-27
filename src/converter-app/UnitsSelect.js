@@ -2,18 +2,45 @@ import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { Context as MagnitudesContext } from '../context';
 import Select, { Option } from '../Forms/select';
+import { transformUnit } from '../utils';
 
 const UnitsSelect = ({ isOutput = false }) => {
   const {
-    sourceUnit,
     selectedMagnitude,
+    setSourceInputValue,
     setSourceUnit,
+    setTargetInputValue,
+    setTargetUnit,
+    sourceInputValue,
+    sourceUnit,
+    targetInputValue,
+    targetUnit,
   } = useContext(MagnitudesContext);
   const { units } = selectedMagnitude;
 
   const handleSelect = (event) => {
     // IDEA: Move this function into a getters file
     const selectedsourceUnit = units.find(unit => unit.name === event.target.value);
+    if (selectedsourceUnit.name === targetUnit.name) {
+      setTargetUnit(units.find(unit => unit.name !== event.target.value));
+
+      // Refresh input values
+      setSourceInputValue(
+        transformUnit(
+          sourceInputValue,
+          sourceUnit.name,
+          targetUnit.name,
+        ),
+      );
+      setTargetInputValue(
+        transformUnit(
+          targetInputValue,
+          targetUnit.name,
+          sourceUnit.name,
+        ),
+      );
+    }
+
     return setSourceUnit(selectedsourceUnit);
   };
 
