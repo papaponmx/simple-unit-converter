@@ -6,7 +6,7 @@ See it live on http://simpleunitconverter.netlify.com
 
 ## Why this project
 
-This is a solution to a very personal problem. 
+This is a solution to a very personal problem.
 
 ### The problem
 

@@ -27,7 +27,7 @@ Please consider that this is a work in progress.
 ```
 src/
   app-header/     # Just the header for the app.
-  context/        # Initial state and all functions that modify state are here.
+  context/        # Initial state and all functions that modify state are here. It is based on Context API and React Hooks.
   converter-app/  # Main components for the app.
   Forms/          # Basic styled form components.
   utils/          # Utilities, like transformUnit() from kg to lbs.
