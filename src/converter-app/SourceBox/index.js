@@ -1,5 +1,5 @@
 /**
- * InputBox
+ * SourceBox
  */
 
 import React from 'react';
@@ -10,7 +10,7 @@ import SourceInput from './SourceInput';
 import UnitsSelect from '../UnitsSelect';
 
 export const Container = styled.div`
-  height: 50vh;
+  height: 49vh;
   width: 100vw;
 
   display: flex;
@@ -24,7 +24,7 @@ const DarkBox = styled.div`
   color: ${props => props.theme.lightColor};
 `;
 
-const InputBox = () => (
+const SourceBox = () => (
   <DarkBox>
     <Container>
       <MagnitudeSelect />
@@ -34,4 +34,4 @@ const InputBox = () => (
   </DarkBox>
 );
 
-export default InputBox;
+export default SourceBox;
