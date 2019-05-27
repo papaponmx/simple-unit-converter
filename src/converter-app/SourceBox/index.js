@@ -10,7 +10,7 @@ import SourceInput from './SourceInput';
 import UnitsSelect from '../UnitsSelect';
 
 export const Container = styled.div`
-  height: 40vh;
+  height: 50vh;
   width: 100vw;
 
   display: flex;
