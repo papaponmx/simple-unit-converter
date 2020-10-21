@@ -35,7 +35,7 @@ const TargetInput = () => {
     <div>
       <Input
         aria-label="Source"
-        id="sourceInput"
+        id="targetInput"
         inputMode="decimal"
         name="sourceInput"
         onChange={handleChange}
