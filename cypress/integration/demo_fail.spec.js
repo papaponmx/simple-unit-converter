@@ -7,7 +7,7 @@ describe('Mi primer test', () => {
       .clear()
       .type('3')
 
-    cy.get('#targetInput').then($input => {
+    cy.get('#falsoSelector').then($input => {
       const value = $input[0].value;
       expect(value).to.equal(expectedValue);
     })
