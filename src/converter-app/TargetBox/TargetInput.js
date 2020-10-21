@@ -3,6 +3,7 @@
  */
 
 import React, { useContext } from 'react';
+
 import { Input } from '../SourceBox/SourceInput';
 import { Context as MagnitudesContext } from '../../context';
 import { transformUnit } from '../../utils';
@@ -16,7 +17,7 @@ const TargetInput = () => {
     targetUnit,
   } = useContext(MagnitudesContext);
 
-  const handleChange = event => setTargetInputValue(event.target.value)
+  const handleChange = (event) => setTargetInputValue(event.target.value)
   || setSourceInputValue(
     transformUnit(
       event.target.value,
@@ -24,7 +25,6 @@ const TargetInput = () => {
       targetUnit.name,
     ),
   );
-
 
   /**
  * IDEA: Rethink what I am doing on line 23 and 24, since I'm

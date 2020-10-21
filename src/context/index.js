@@ -15,7 +15,6 @@ export const Context = createContext();
   };
  */
 
-
 export const Provider = ({ children }) => { // eslint-disable-line
   const [magnitudes, setMagnitude] = useState(initialContext.magnitudes);
   const [selectedMagnitude, setSelectedMagnitude] = useState(initialContext.magnitudes[0]);
@@ -45,6 +44,5 @@ export const Provider = ({ children }) => { // eslint-disable-line
     </Context.Provider>
   );
 };
-
 
 export const { Consumer } = Context;

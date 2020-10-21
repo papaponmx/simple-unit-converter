@@ -5,13 +5,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import TargetInput from './TargetInput';
-import UnitsSelect from '../UnitsSelect';
 import { Container } from '../SourceBox';
+import UnitsSelect from '../UnitsSelect';
+import TargetInput from './TargetInput';
 
 const PrimaryBox = styled.div`
- background-color: ${props => props.theme.primaryColor};
- color: ${props => props.theme.lightColor};
+ background-color: ${(props) => props.theme.primaryColor};
+ color: ${(props) => props.theme.lightColor};
 `;
 
 const TargetBox = () => (

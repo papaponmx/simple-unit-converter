@@ -4,7 +4,7 @@ import { Context as MagnitudesContext } from '../../context';
 import { transformUnit } from '../../utils';
 
 export const Input = styled.input`
-  color: ${props => props.theme.lightColor};
+  color: ${(props) => props.theme.lightColor};
   border: none;
   background-color: rgba(155, 155, 155, 0.2);
   font-size: 1.2rem;
@@ -22,7 +22,7 @@ const SourceInput = () => {
     targetUnit,
   } = useContext(MagnitudesContext);
 
-  const handleChange = event => setSourceInputValue(event.target.value) || setTargetInputValue(
+  const handleChange = (event) => setSourceInputValue(event.target.value) || setTargetInputValue(
     transformUnit(
       event.target.value,
       targetUnit.name,

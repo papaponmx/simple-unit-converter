@@ -20,8 +20,8 @@ export const Container = styled.div`
 `;
 
 const DarkBox = styled.div`
-  background-color: ${props => props.theme.darkColor};
-  color: ${props => props.theme.lightColor};
+  background-color: ${(props) => props.theme.darkColor};
+  color: ${(props) => props.theme.lightColor};
 `;
 
 const SourceBox = () => (

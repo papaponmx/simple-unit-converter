@@ -1,7 +1,9 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-import { Context as MagnitudesContext } from '../context';
+
 import Select, { Option } from '../Forms/select';
+
+import { Context as MagnitudesContext } from '../context';
 import { transformUnit } from '../utils';
 
 const UnitsSelect = ({ isOutput = false }) => {
@@ -20,9 +22,9 @@ const UnitsSelect = ({ isOutput = false }) => {
 
   const handleSelect = (event) => {
     // IDEA: Move this function into a getters file
-    const selectedsourceUnit = units.find(unit => unit.name === event.target.value);
+    const selectedsourceUnit = units.find((unit) => unit.name === event.target.value);
     if (selectedsourceUnit.name === targetUnit.name) {
-      setTargetUnit(units.find(unit => unit.name !== event.target.value));
+      setTargetUnit(units.find((unit) => unit.name !== event.target.value));
 
       // Refresh input values
       setSourceInputValue(
@@ -46,7 +48,7 @@ const UnitsSelect = ({ isOutput = false }) => {
 
   const renderOptions = () => {
     const options = isOutput
-      ? units.filter(unit => unit.name !== sourceUnit.name)
+      ? units.filter((unit) => unit.name !== sourceUnit.name)
       : units;
 
     return options.map(({ name }) => (
